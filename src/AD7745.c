@@ -10,27 +10,6 @@
 #include "AD7745.h"
 
 /**
- * @brief Initializes the AD7745/6, according to these specifications:
- * 			- Capacitance Measurement Enabled, in Continuous Mode
- * 			- Differential Measurement Disabled, Channel 2 disconnected
- * 			- Both Capacitance and Temperature Sampling Times are 62 ms
- * 			- CAPDAC set in order to have a range from 0 to 2*F*CAPDAC pF,
- * 			  where F = (R1+R2)/(R2-R1) (see CN-0129 Application Note)
- *
- * @return None
-*/
-void AD7745_Init()
-{
-	// Reset Device
-	AD7745_Reset();
-
-	// Configure main registers
-	AD7745_WriteCapSetupRegister(CAPSETUP_CAPEN_ON|CAPSETUP_CIN2_OFF|CAPSETUP_CAPDIFF_OFF|CAPSETUP_CAPCHOPP_OFF);
-	AD7745_WriteExcSetupRegister(EXCSETUP_CLKCTRL_OFF|EXCSETUP_EXCON_ON|EXCSETUP_nEXCB_ON|EXCSETUP_EXCA_ON|EXCSETUP_EXCLVL_VDD_2);
-	AD7745_WriteConfigurationRegister(CONF_VTF_62_MS|CONF_CAPF_62_MS|CONF_MD_CONTINUOUS_CONVERSION);
-}
-
-/**
  * @brief Resets the AD7746.
  *
  * @return None

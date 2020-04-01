@@ -171,7 +171,6 @@
 #define CAPDACB_DACBENB_ON					0b10000000
 //********************************************************************************//
 
-void AD7745_Init();
 void AD7745_Reset();
 
 void AD7745_Read(uint8_t subAddr,uint8_t* dataBuffer,uint8_t bytesNumber);
