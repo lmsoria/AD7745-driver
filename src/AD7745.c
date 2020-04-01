@@ -25,13 +25,13 @@ void AD7745_Read(uint8_t sub_addr,uint8_t* data_buffer,uint8_t data_size)
 void AD7745_Write(uint8_t sub_addr, uint8_t* data_buffer, uint8_t data_size)
 {
     uint8_t buffer[10] = {0, };
-    uint8_t byte = 0;
-
     buffer[0] = sub_addr;
-    for(byte = 1; byte <= data_size; byte++)
+
+    for(uint8_t byte = 1; byte <= data_size; byte++)
     {
         buffer[byte] = data_buffer[byte-1];
     }
+
     i2c_write(AD7745_ADDR, buffer, data_size+1);
 }
 
