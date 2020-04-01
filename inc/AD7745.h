@@ -183,25 +183,25 @@ void AD7745_Reset();
  * @brief Reads data from AD7745/6 registers, starting from the selected
  *        register address pointer.
  *
- * @param subAddr - The selected register address pointer.
- * @param dataBuffer - Pointer to a buffer that will store the received data.
- * @param bytesNumber - Number of bytes that will be read.
+ * @param sub_addr - The selected register address pointer.
+ * @param data_buffer - Pointer to a buffer that will store the received data.
+ * @param data_size - Number of bytes that will be read.
  *
  * @return None
 */
-void AD7745_Read(uint8_t subAddr,uint8_t* dataBuffer,uint8_t bytesNumber);
+void AD7745_Read(uint8_t sub_addr,uint8_t* data_buffer,uint8_t data_size);
 
 /**
  * @brief Writes data into AD7745/6 registers, starting from the selected
  *        register address pointer.
  *
- * @param subAddr - The selected register address pointer.
- * @param dataBuffer - Pointer to a buffer storing the transmission data.
- * @param bytesNumber - Number of bytes that will be sent.
+ * @param sub_addr - The selected register address pointer.
+ * @param data_buffer - Pointer to a buffer storing the transmission data.
+ * @param data_size - Number of bytes that will be sent.
  *
  * @return None.
 */
-void AD7745_Write(uint8_t subAddr, uint8_t* dataBuffer, uint8_t bytesNumber);
+void AD7745_Write(uint8_t sub_addr, uint8_t* data_buffer, uint8_t data_size);
 
 /**
  * @brief Waits until a conversion on a capacitive channel has been finished and

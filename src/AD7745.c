@@ -16,23 +16,23 @@ void AD7745_Reset(void)
     i2c_write(AD7745_ADDR, (uint8_t*)&cmd, 1);
 }
 
-void AD7745_Read(uint8_t subAddr,uint8_t* dataBuffer,uint8_t bytesNumber)
+void AD7745_Read(uint8_t sub_addr,uint8_t* data_buffer,uint8_t data_size)
 {
-    i2c_write(AD7745_ADDR, (uint8_t*)&subAddr, 1);
-    i2c_read(AD7745_ADDR, dataBuffer, bytesNumber);
+    i2c_write(AD7745_ADDR, (uint8_t*)&sub_addr, 1);
+    i2c_read(AD7745_ADDR, data_buffer, data_size);
 }
 
-void AD7745_Write(uint8_t subAddr, uint8_t* dataBuffer, uint8_t bytesNumber)
+void AD7745_Write(uint8_t sub_addr, uint8_t* data_buffer, uint8_t data_size)
 {
-    uint8_t sendBuffer[10] = {0, };
+    uint8_t buffer[10] = {0, };
     uint8_t byte = 0;
 
-    sendBuffer[0] = subAddr;
-    for(byte = 1; byte <= bytesNumber; byte++)
+    buffer[0] = sub_addr;
+    for(byte = 1; byte <= data_size; byte++)
     {
-        sendBuffer[byte] = dataBuffer[byte-1];
+        buffer[byte] = data_buffer[byte-1];
     }
-    i2c_write(AD7745_ADDR, sendBuffer, bytesNumber+1);
+    i2c_write(AD7745_ADDR, buffer, data_size+1);
 }
 
 uint32_t AD7745_getCapacitance()
