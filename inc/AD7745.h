@@ -1,5 +1,5 @@
 /**********************************************************************
-* 
+*
 * @file		AD7745.h
 * @brief	Contains a functional hardware-independent driver for the AD7745/6.
 *           To use this driver the i2c API must be written by the user.
@@ -54,7 +54,7 @@
 //********************************************************************************//
 
 //********************************************************************************//
-// AD7745 capacitive channel setup bit masks 
+// AD7745 capacitive channel setup bit masks
 // CAPEN = 1 enables capacitive channel for single conversion, continuous conversion, or calibration.
 #define CAPSETUP_CAPEN_OFF 					0b00000000
 #define CAPSETUP_CAPEN_ON 					0b10000000
@@ -218,7 +218,7 @@ uint32_t AD7745_getCapacitance();
  * @return temperature - The content of the VT Data register.
 */
 uint32_t AD7745_getTemperature();
-    
+
 /**
  * @brief Writes the Cap Setup Register
  *
@@ -230,16 +230,16 @@ void AD7745_WriteCapSetupRegister(uint8_t data);
  * @brief Writes the Voltage/Temperature configuration Register
  *
  * @param data - The desired register value
- * 
+ *
  * @return None
 */
 void AD7745_WriteVTSetupRegister(uint8_t data);
 
 /**
  * @brief Writes the Excitation Setup Register
- * 
+ *
  * @param data - The desired register value
- * 
+ *
  * @return None
 */
 void AD7745_WriteExcSetupRegister(uint8_t data);
@@ -248,7 +248,7 @@ void AD7745_WriteExcSetupRegister(uint8_t data);
  * @brief Writes the Configuration Register
  *
  * @param data - The desired register value
- * 
+ *
  * @return None
 */
 void AD7745_WriteConfigurationRegister(uint8_t data);
@@ -257,7 +257,7 @@ void AD7745_WriteConfigurationRegister(uint8_t data);
  * @brief Writes the CAPDAC A configuration register
  *
  * @param data - The desired register value
- * 
+ *
  * @return None
 */
 void AD7745_WriteCapDacARegister(uint8_t data);
@@ -266,7 +266,7 @@ void AD7745_WriteCapDacARegister(uint8_t data);
  * @brief Writes the CAPDAC B configuration register
  *
  * @param data - The desired register value
- * 
+ *
  * @return None
 */
 void AD7745_WriteCapDacBRegister(uint8_t data);

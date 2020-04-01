@@ -1,8 +1,7 @@
 /**********************************************************************
 * @file		i2c.h
-* @brief	API for the I2C driver needed to communicate with the AD7745/6. 
+* @brief	API for the I2C driver needed to communicate with the AD7745/6.
 *           It's user responsability to implement the following functions.
-*
 * @version	2.0
 * @date		2. May. 2017
 * @author	Leandro Soria

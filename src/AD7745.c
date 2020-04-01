@@ -1,5 +1,5 @@
 /**********************************************************************
-* 
+*
 * @file		AD7745.c
 * @brief	Contains a functional hardware-independent driver for the AD7745/6.
 *           To use this driver the i2c API must be written by the user.
