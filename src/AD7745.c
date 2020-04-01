@@ -10,7 +10,7 @@
 #include "AD7745.h"
 
 /**
- * @brief Resets the AD7746.
+ * @brief Resets the AD7746. Please refer to the datasheet to see the default register values.
  *
  * @return None
 */
