@@ -91,7 +91,7 @@
 // VTSHORT = 1 internally shorts the voltage/temperature channel input for test purposes.
 #define VTSETUP_VTSHORT_OFF					0b00000000
 #define VTSETUP_VTSHORT_ON					0b00000010
-// VTCHOP = 1 sets internal chopping on the voltage/temperature channel. 
+// VTCHOP = 1 sets internal chopping on the voltage/temperature channel.
 // The VTCHOP bit must be set to 1 for the specified voltage/temperature channel performance.
 #define VTSETUP_VTCHOP_OFF					0b00000000
 #define VTSETUP_VTCHOP_ON					0b00000001
@@ -104,14 +104,14 @@
 // This also increases the conversion time on all channels (capacitive, voltage, and temperature) by a factor of 2.
 #define EXCSETUP_CLKCTRL_OFF				0b00000000
 #define EXCSETUP_CLKCTRL_ON					0b10000000
-// When EXCON = 0, the excitation signal is present on the output only during capacitance channel conversion. 
+// When EXCON = 0, the excitation signal is present on the output only during capacitance channel conversion.
 // When EXCON = 1, the excitation signal is present on the output during both capacitance and voltage/temperature conversion.
 #define EXCSETUP_EXCON_OFF					0b00000000
 #define EXCSETUP_EXCON_ON					0b01000000
 // EXCB = 1 enables EXCB pin as the excitation output.
 #define EXCSETUP_EXCB_OFF					0b00000000
 #define EXCSETUP_EXCB_ON					0b00100000
-//nEXCB = 1 enables EXCB pin as the inverted excitation output. 
+//nEXCB = 1 enables EXCB pin as the inverted excitation output.
 // Only one of the EXCB or the EXCB bits should be set for proper operation.
 #define EXCSETUP_nEXCB_OFF					0b00000000
 #define EXCSETUP_nEXCB_ON					0b00010000
@@ -131,15 +131,15 @@
 
 //********************************************************************************//
 // AD7745 Converter update rate and mode of operation setup
-// Voltage/temperature channel digital filter setup—conversion time/update rate setup. 
-// The conversion times in this table are valid for the CLKCTRL = 0 in the EXC SETUP register. 
+// Voltage/temperature channel digital filter setup—conversion time/update rate setup.
+// The conversion times in this table are valid for the CLKCTRL = 0 in the EXC SETUP register.
 // The conversion times are longer by a factor of two for the CLKCTRL = 1.
 #define CONF_VTF_20_MS						0b00000000
 #define CONF_VTF_32_MS						0b01000000
 #define CONF_VTF_62_MS						0b10000000
 #define CONF_VTF_122_MS						0b11000000
-// Capacitive channel digital filter setup—conversion time/update rate setup. 
-// The conversion times in this table are valid for the CLKCTRL = 0 in the EXC SETUP register. 
+// Capacitive channel digital filter setup—conversion time/update rate setup.
+// The conversion times in this table are valid for the CLKCTRL = 0 in the EXC SETUP register.
 // The conversion times are longer by factor of two for the CLKCTRL = 1.
 #define CONF_CAPF_11_MS						0b00000000
 #define CONF_CAPF_12_MS						0b00001000
