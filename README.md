@@ -1,5 +1,5 @@
 # AD7745/6 Driver
-This is a little driver I wrote for the Analog Devices AD7745 (works the same for AD7746) for a humidity sensor proyect a few years ago. It's written in C and its meant to be as simple as possible, without losing details. This project is inspired in a repository I saw here on GitHub on 2016, but I couldn't find it to link it here (Thank you unknown user!)
+This is a little driver I wrote for the Analog Devices AD7745 (works the same for AD7746) for a humidity sensor project a few years ago. It's written in C and its meant to be as simple as possible, without losing details. This project is inspired in a repository I saw here on GitHub on 2016, but I couldn't find it to link it here (Thank you unknown user!)
 
 [![AD7746-block-diagram](https://www.analog.com/-/media/analog/en/products/image/functional-block-diagrams/ad7745-fbl.gif?la=en&h=500&thn=1&hash=C416ECFBC035B58CCBD19FC524BA8F89)](https://www.analog.com/en/products/ad7745.html#product-overview)
 
