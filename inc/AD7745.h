@@ -171,19 +171,104 @@
 #define CAPDACB_DACBENB_ON					0b10000000
 //********************************************************************************//
 
+
+/**
+ * @brief Resets the AD7746. Please refer to the datasheet to see the default register values.
+ *
+ * @return None
+*/
 void AD7745_Reset();
 
+/**
+ * @brief Reads data from AD7745/6 registers, starting from the selected
+ *        register address pointer.
+ *
+ * @param subAddr - The selected register address pointer.
+ * @param dataBuffer - Pointer to a buffer that will store the received data.
+ * @param bytesNumber - Number of bytes that will be read.
+ *
+ * @return None
+*/
 void AD7745_Read(uint8_t subAddr,uint8_t* dataBuffer,uint8_t bytesNumber);
+
+/**
+ * @brief Writes data into AD7745/6 registers, starting from the selected
+ *        register address pointer.
+ *
+ * @param subAddr - The selected register address pointer.
+ * @param dataBuffer - Pointer to a buffer storing the transmission data.
+ * @param bytesNumber - Number of bytes that will be sent.
+ *
+ * @return None.
+*/
 void AD7745_Write(uint8_t subAddr, uint8_t* dataBuffer, uint8_t bytesNumber);
 
+/**
+ * @brief Waits until a conversion on a capacitive channel has been finished and
+ *        returns the output data.
+ *
+ * @return capacitance - The content of the Cap Data register.
+*/
 uint32_t AD7745_getCapacitance();
+
+/**
+ * @brief Waits until a conversion on a voltage/temperature channel has been
+ *        finished and returns the output data.
+ *
+ * @return temperature - The content of the VT Data register.
+*/
 uint32_t AD7745_getTemperature();
     
+/**
+ * @brief Writes the Cap Setup Register
+ *
+ * @return None
+*/
 void AD7745_WriteCapSetupRegister(uint8_t data);
+
+/**
+ * @brief Writes the Voltage/Temperature configuration Register
+ *
+ * @param data - The desired register value
+ * 
+ * @return None
+*/
 void AD7745_WriteVTSetupRegister(uint8_t data);
+
+/**
+ * @brief Writes the Excitation Setup Register
+ * 
+ * @param data - The desired register value
+ * 
+ * @return None
+*/
 void AD7745_WriteExcSetupRegister(uint8_t data);
+
+/**
+ * @brief Writes the Configuration Register
+ *
+ * @param data - The desired register value
+ * 
+ * @return None
+*/
 void AD7745_WriteConfigurationRegister(uint8_t data);
+
+/**
+ * @brief Writes the CAPDAC A configuration register
+ *
+ * @param data - The desired register value
+ * 
+ * @return None
+*/
 void AD7745_WriteCapDacARegister(uint8_t data);
+
+/**
+ * @brief Writes the CAPDAC B configuration register
+ *
+ * @param data - The desired register value
+ * 
+ * @return None
+*/
 void AD7745_WriteCapDacBRegister(uint8_t data);
 
 #endif  // __AD7745_DRIVER_H__
