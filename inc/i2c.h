@@ -11,15 +11,11 @@
 #include <stdint.h>
 
 /**
- * @brief Writes data to a slave device.
+ * @brief Initializes the I2C module.
  *
- * @param slave_address - Address of the slave device.
- * @param data_buffer - Pointer to a buffer storing the transmission data.
- * @param data_size - Number of bytes to write.
- *
- * @return None.
+ * @return None
 */
-void i2c_write(uint8_t slave_address, uint8_t* data_buffer, uint8_t data_size);
+void i2c_init();
 
 /**
  * @brief Reads data from a slave device.
@@ -31,3 +27,14 @@ void i2c_write(uint8_t slave_address, uint8_t* data_buffer, uint8_t data_size);
  * @return None.
 */
 void i2c_read(uint8_t slave_address, uint8_t* data_buffer, uint8_t data_size);
+
+/**
+ * @brief Writes data to a slave device.
+ *
+ * @param slave_address - Address of the slave device.
+ * @param data_buffer - Pointer to a buffer storing the transmission data.
+ * @param data_size - Number of bytes to write.
+ *
+ * @return None.
+*/
+void i2c_write(uint8_t slave_address, uint8_t* data_buffer, uint8_t data_size);
