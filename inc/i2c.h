@@ -3,7 +3,7 @@
 * @brief	API for the I2C driver needed to communicate with the AD7745/6.
 *           It's user responsability to implement the following functions.
 * @version	2.0
-* @date		2. May. 2017
+* @date		1. Apr. 2020
 * @author	Leandro Soria
 *
 **********************************************************************/
