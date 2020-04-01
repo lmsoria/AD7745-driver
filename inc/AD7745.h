@@ -171,7 +171,6 @@
 #define CAPDACB_DACBENB_ON					0b10000000
 //********************************************************************************//
 
-
 /**
  * @brief Resets the AD7746. Please refer to the datasheet to see the default register values.
  *
@@ -189,7 +188,7 @@ void AD7745_Reset();
  *
  * @return None
 */
-void AD7745_Read(uint8_t sub_addr,uint8_t* data_buffer,uint8_t data_size);
+void AD7745_Read(uint8_t sub_addr, uint8_t* data_buffer, uint8_t data_size);
 
 /**
  * @brief Writes data into AD7745/6 registers, starting from the selected

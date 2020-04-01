@@ -16,7 +16,7 @@ void AD7745_Reset(void)
     i2c_write(AD7745_ADDR, (uint8_t*)&cmd, 1);
 }
 
-void AD7745_Read(uint8_t sub_addr,uint8_t* data_buffer,uint8_t data_size)
+void AD7745_Read(uint8_t sub_addr, uint8_t* data_buffer, uint8_t data_size)
 {
     i2c_write(AD7745_ADDR, (uint8_t*)&sub_addr, 1);
     i2c_read(AD7745_ADDR, data_buffer, data_size);
